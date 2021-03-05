@@ -1,0 +1,9 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "hello@cypress.io",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "landingPageTitle": "Amazon.co.uk: Low Prices in Electronics, Books, Sports Equipment & more",
+  "signInPageTitle": "Amazon Sign In",
+  "signInUN": "annie14jun@yahoo.com",
+  "password":"Loadrunner_1"
+}
