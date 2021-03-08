@@ -18,12 +18,8 @@ class DeliveryAddressPage{
 
         cy.wrap($price).then(function($priceExt){
             prcPrdDetPage = $priceExt.text();
-            cy.log(prcPrdDetPage);
-    
             expect(prcShopBag.trim()).to.be.equal(prcPrdDetPage);
             });
-
-
         cy.get(this.continueBttnElm).contains("Continue").eq(0).click();
     }
 
