@@ -7,10 +7,8 @@ class SignInPage{
     passwordTextElm = "#ap_password";
     signInSubmitBttnElm = "#signInSubmit";
     textAsPasswordElm = ".a-form-label";
-    
 
-    //Delivery Address
-    deliveryAddBttnElm = ".a-declarative.a-button-text ";
+    
 
     isSignInPagedisplayed($daFixture)
     {
@@ -40,10 +38,8 @@ class SignInPage{
     {
         cy.get(this.passwordTextElm).type($fixture.password);
         cy.get(this.signInSubmitBttnElm).click();
-        //
-        cy.get(this.deliveryAddBttnElm).contains("Deliver to this address").click();
-        cy.get(".a-button-text").contains("Continue").eq(0).click();
-    }
+        
+    } 
 
 }
 

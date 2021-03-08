@@ -42,7 +42,8 @@ class ProductDetailPage{
     addToCart()
     {
         cy.get(this.priceElm).as('prc');
-        cy.get("#add-to-cart-button").click();
+        cy.wait(3000);
+        cy.get(this.addToCartBttnElm).click();
         
     }
 

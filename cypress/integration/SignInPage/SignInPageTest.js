@@ -25,3 +25,5 @@ Then("I should get the option to enter the password", function(){
 And("I enter the password and click on Sign in button", function(){
     signInPage.clickSignIn(this.dataFixture);
 })
+
+

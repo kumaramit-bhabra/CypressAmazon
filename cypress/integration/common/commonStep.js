@@ -3,11 +3,13 @@ import ProductListingPage from "../../pageObjects/ProductListingPage";
 import ProductDetailPage from "../../pageObjects/ProductDetailPage";
 import {Given, When , Then, And} from "cypress-cucumber-preprocessor/steps";
 import ShoppingBagPage from "../../pageObjects/ShoppingBagPage";
+import SignInPage from "../../pageObjects/SignInPage";
 
 const homePage = new HomePage();
 const productListingPage = new ProductListingPage();
 const productDetailPage = new ProductDetailPage();
 const shoppingBagPage = new ShoppingBagPage();
+const signInPage = new SignInPage();
 
 beforeEach(function(){
 
@@ -53,4 +55,20 @@ Then("Correct Price should be displayed in the shopping bag",function(){
 
 And("I click on checkout button",function(){
     shoppingBagPage.clickCheckOutButton();
+})
+
+And("I enter the email Id", function(){
+    signInPage.enterEmail(this.dataFixture);
+})
+
+And("Click on continue button", function(){
+    signInPage.clickContinue();
+})
+
+Then("I should get the option to enter the password", function(){
+    signInPage.isPasswordOptionDisplayed();
+})
+
+And("I enter the password and click on Sign in button", function(){
+    signInPage.clickSignIn(this.dataFixture);
 })
