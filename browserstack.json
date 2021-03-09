@@ -1,0 +1,48 @@
+{
+    "auth": {
+        "username": "kumar615",
+        "access_key": "SV5QYqNRc2K8odiz6qxy"
+    },
+    "browsers": [
+        {
+        "browser": "chrome",
+        "os": "Windows 10",
+        "versions": ["latest", "latest - 1"]
+      },
+      {
+        "browser": "firefox",
+        "os": "OS X Mojave",
+        "versions": ["latest", "latest - 1"]
+      },
+      {
+        "browser": "edge",
+        "os": "OS X Catalina",
+        "versions": ["latest","latest - 1"]
+      }
+    ],
+    "run_settings": {
+        "cypress_config_file": "./cypress.json",
+        "project_name": "CypressAmazon",
+        "build_name": "Build .01",
+        "exclude": [],
+        "parallels": "5",
+        "specs": ["cypress/integration/*.feature"],
+        "npm_dependencies": {
+            "chai-string": "^1.5.0",
+            "cypress": "^6.5.0",
+            "cypress-cucumber-preprocessor": "^4.0.1",
+            "mocha": "^8.3.0"
+        },
+        "package_config_options": {
+            "cypress-cucumber-preprocessor": {
+            "nonGlobalStepDefinitions": true
+        }},
+        "headless": true
+    },
+
+    "connection_settings": {
+        "local": false,
+        "local_identifier": null
+    },
+    "disable_usage_reporting": false
+}
