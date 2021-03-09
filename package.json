@@ -7,7 +7,7 @@
     "testRunner": ".\\node_modules\\.bin\\cypress open",
     "runInChrome": ".\\node_modules\\.bin\\cypress run --browser=chrome --record --key b1404c26-e478-4f48-bef1-4bc58c28fbc1",
     "runInEdge": ".\\node_modules\\.bin\\cypress run --browser=edge --record --key b1404c26-e478-4f48-bef1-4bc58c28fbc1",
-    "runInChromeHdLess": ".\\node_modules\\.bin\\cypress run --browser=chrome --headless --record --key b1404c26-e478-4f48-bef1-4bc58c28fbc1"
+    "runInChromeHdLess": ".\\node_modules\\.bin\\cypress run --browser=chrome --headless"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true

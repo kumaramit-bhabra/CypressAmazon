@@ -7,7 +7,7 @@ Background: Perform all the background tasks before reching to Sign In Page
     When Search is performed with keyword 'Dresses'
     Then Search suggestion box result should have 'Dresses'
     And I select one of the options and press Search button
-    And I select one of the product from listing page by 'Women 50s Vintage Sleeveless V'
+    And I select one of the product from listing page by 'Casual Suspender Skirts Basic High Waist Flared'
     Then Product Detail Page should be displayed
     And I select a Size
     And I click on Add to Cart Button

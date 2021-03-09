@@ -5,7 +5,7 @@ class ProductDetailPage{
     sizeDrpDwnElm = "#native_dropdown_selected_size_name";
     availOptElm ="option[class='dropdownAvailable']";
     addToCartBttnElm = "#add-to-cart-button";
-    priceElm = "#priceblock_saleprice";
+    priceElm = "#priceblock_ourprice";
     prdPrice = 0;
     
 
@@ -24,14 +24,17 @@ class ProductDetailPage{
     {
         var drpDwnElm = this.sizeDrpDwnElm;
         var option = this.availOptElm;
+        var prdPrice = this.priceElm;
         
         cy.get(this.sizeDrpDwnElm).find(this.availOptElm).each(function($el,index,$list){
                         
-            if($list.length > 5)
+            if($list.length > 3)
             {
                 cy.get(drpDwnElm).find(option).eq('2').then(function($drpDwnValue)
                 {
                     cy.get(drpDwnElm).select($drpDwnValue.text().trim());
+                    cy.wait(3000);
+                    cy.get(prdPrice).as('prc');
                 })
             return false; 
             }
@@ -41,7 +44,7 @@ class ProductDetailPage{
 
     addToCart()
     {
-        cy.get(this.priceElm).as('prc');
+        //cy.get(this.priceElm).as('prc');
         cy.wait(3000);
         cy.get(this.addToCartBttnElm).click();
         

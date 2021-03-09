@@ -12,7 +12,7 @@ Scenario:  Validate that Product Listing Page is displayed
     Then Correct layout should be displayed for Product Listing Page
 
 Scenario: Validate user is able to select one of the products by description
-    And I select one of the product from listing page by 'Women 50s Vintage Sleeveless V'
+    And I select one of the product from listing page by 'Casual Suspender Skirts Basic High Waist Flared'
 
 Scenario: Validate user is able to select one of the products by price
     And I select one of the product from listing page by price
