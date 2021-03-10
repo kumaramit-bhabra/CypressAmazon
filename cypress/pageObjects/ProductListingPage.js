@@ -3,8 +3,6 @@ import { expect } from "chai";
 class ProductListingPage{
 
     //Web elements associated with the Product Listing Page
-    //prdListDescElm = ".a-size-mini.a-spacing-none.a-color-base.s-line-clamp-2 .a-link-normal.a-text-normal";
-
     prdListDescElm = ".a-size-base-plus.a-color-base.a-text-normal";
     prdListPriceElm = ".a-price";
     departLiElm = "#departments li";
@@ -41,8 +39,7 @@ class ProductListingPage{
                 return false;
             }
         })
-        cy.log(this.prdDesc);
-
+        
         return this.prdDesc;
         
     }
