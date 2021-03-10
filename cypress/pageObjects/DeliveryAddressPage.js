@@ -11,7 +11,9 @@ class DeliveryAddressPage{
         let prcShopBag;
 
         cy.get(this.deliveryAddBttnElm).contains("Deliver to this address").click();
-
+        
+        cy.wait(4000);
+        
         cy.get(this.priceElm).then(function($shopBagPrc){
             prcShopBag = $shopBagPrc.text();
         });
@@ -20,6 +22,7 @@ class DeliveryAddressPage{
             prcPrdDetPage = $priceExt.text();
             expect(prcShopBag.trim()).to.be.equal(prcPrdDetPage);
             });
+        
         cy.get(this.continueBttnElm).contains("Continue").eq(0).click();
     }
 
